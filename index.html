@@ -213,9 +213,42 @@
   @media (max-width: 640px) {
     nav { padding: 1rem 1.2rem; }
     .nav-links { display: none; }
-    .hero { padding: 6rem 1.2rem 3rem; }
+    .hero { padding: 8rem 1.2rem 3rem; }
+
+    /* CHANGE 1: Hide the large decorative </> element — it overlaps text and causes horizontal scroll on mobile */
+    .hero-deco { display: none; }
+
+    /* CHANGE 2: Reduce hero bio font size — 20px was too large and caused overflow on small screens */
+    .hero-bio { font-size: 14px; }
+
+    /* CHANGE 3: Reduce button font size — 15px buttons were too wide for small screens */
+    .btn { font-size: 12px; padding: 0.65rem 1.2rem; }
+
+    /* CHANGE 4: Reduce education degree font size — 1.5rem wrapped oddly on narrow screens */
+    .edu-degree { font-size: 1.1rem; }
+
+    /* CHANGE 5: Force projects grid to single column — minmax(280px,1fr) was wider than the screen */
+    .projects-grid { grid-template-columns: 1fr; }
+
+    /* CHANGE 6: Reduce project title font size on mobile */
+    .proj-title { font-size: 1.1rem; }
+
+    /* CHANGE 7: Reduce project description font size on mobile */
+    .proj-desc { font-size: 13px; }
+
+    /* CHANGE 8: Force skills grid to single column — minmax(180px,1fr) was cramped on mobile */
+    .skills-grid { grid-template-columns: 1fr; }
+
+    /* CHANGE 9: Force certs grid to single column — minmax(260px,1fr) overflowed on mobile */
+    .certs-grid { grid-template-columns: 1fr; }
+
+    /* CHANGE 10: Reduce cert title font size on mobile */
+    .cert-title { font-size: 1rem; }
+
     section { padding: 3rem 1.2rem; }
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+
+    /* CHANGE 11: Reduce footer font size and stack vertically */
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; font-size: 12px; padding: 1.2rem; }
   }
 </style>
 </head>
